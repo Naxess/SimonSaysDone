@@ -285,6 +285,7 @@ public class MainActivity extends AppCompatActivity
                 //textView.setText("Score: ");
                 soundSix.start();
                 keepGoing = false;
+                hiScore.setText(scoreLevel + "");
             }
             if(keepGoing == true)
             {
@@ -292,6 +293,7 @@ public class MainActivity extends AppCompatActivity
                 miniScore++;
                 score.setText(miniScore + "");
                 numUserInputs++;
+                hiScore.setText(scoreLevel + "");
                 //textView.setText(userSequenceString.toString());
             }
         }
@@ -350,7 +352,7 @@ public class MainActivity extends AppCompatActivity
                                     saveData("savedHighScore", highScore + "", getApplicationContext());
                                 }
                             }
-                            if(highestScore = true)
+                            if(highestScore == true)
                             {
                                 hiScore.setText("NEW HIGH SCORE");
                                 highestScore = false;
